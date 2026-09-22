@@ -6,9 +6,7 @@ part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
   RegisterRepo _registerRepo;
-  RegisterCubit(
-      this._registerRepo
-      ) : super(RegisterInitial());
+  RegisterCubit(this._registerRepo) : super(RegisterInitial());
 
 
 
