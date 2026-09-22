@@ -1,15 +1,17 @@
+import 'package:carwash/core/di/service_locator.dart';
+import 'package:carwash/core/networking/dio_factory.dart';
 import 'package:dio/dio.dart';
 
 class RegisterRepo {
 
-  final Dio _dio;
-  RegisterRepo(this._dio);
+  
+ 
 
 
 
   register()async{
     try{
-      final response=await _dio.post('path',data: {
+      final response=await sl<DioClient>().dio.post('path',data: {
 
       });
     }catch(e){
