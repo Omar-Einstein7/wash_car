@@ -1,3 +1,4 @@
+
 import 'package:carwash/core/routes/app_routes.dart';
 import 'package:carwash/core/widgets/app_button.dart';
 import 'package:carwash/core/widgets/app_text_field.dart';
@@ -59,7 +60,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   backgroundColor: Colors.green,
                 ),
               );
-              Navigator.pushReplacementNamed(context, AppRoutes.loginScreen);
+              Navigator.pushReplacementNamed(context, AppRoutes.homeScreen);
             } else if (state is RegisterError) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
