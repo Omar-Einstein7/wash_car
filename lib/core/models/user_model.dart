@@ -1,0 +1,32 @@
+class UserModel {
+  final String? id;
+  final String? name;
+  final String? email;
+  final String? phone;
+  final String? avatar;
+
+  const UserModel({this.id, this.name, this.email, this.phone, this.avatar});
+
+  factory UserModel.fromJson(Map<String, dynamic> json) {
+    return UserModel(
+      id: json['id']?.toString(),
+      name: json['name'] as String?,
+      email: json['email'] as String?,
+      phone: json['phone'] as String?,
+      avatar: json['avatar'] as String?,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'email': email,
+      'phone': phone,
+      'avatar': avatar,
+    };
+  }
+
+  bool get isEmpty => id == null || id!.isEmpty;
+  bool get isNotEmpty => !isEmpty;
+}
